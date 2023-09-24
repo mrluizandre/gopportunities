@@ -7,6 +7,18 @@ import (
 	"github.com/mrluizandre/gopportunities/schemas"
 )
 
+// @Basepath /api/v1
+
+// @Summary Show Opening
+// @Description Show job opening
+// @Tags Openings
+// @Accept json
+// @Produce json
+// @Param id query string true "Opening Identification"
+// @Success 200 {object} ShowOpeningResponse
+// @Failure 400 {object} ErrorResponse
+// @Failure 404 {object} ErrorResponse
+// @Router /opening [get]
 func ShowOpeningHandler(context *gin.Context) {
 	id := context.Query("id")
 	if id == "" {
