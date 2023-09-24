@@ -29,7 +29,8 @@ type ErrorResponse struct {
 	ErroCode string `json:"errorCode"`
 }
 
-type CreateOpengingResponse struct {
+type CreateOpeningResponse struct {
+	Message string                  `json:"message"`
 	Message string                  `json:"message"`
 	Data    schemas.OpeningResponse `json:"data"`
 }
